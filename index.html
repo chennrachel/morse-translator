@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script defer type="module" src="./modules/englishToMorse.js"></script>
+        <script defer type="module" src="./modules/morseToEnglish.js"></script>
+        <script defer type="module" src="./modules/DOM.js"></script>
+        <link rel="stylesheet" href="./style.css" />
+        <title>Morse Translator</title>
+    </head>
+    <body>
+        <h1>Morse Code Translator</h1>
+        <p>
+            I want to translate from
+            <select id="drop-down">
+                <option class="drop-down__option" value="morsecode">
+                    Morse Code
+                </option>
+                <option class="drop-down__option" value="english">
+                    English
+                </option>
+            </select>
+            to <span class="other-lang">English</span>
+        </p>
+        <form class="translator">
+            <div>
+                <span id="spanmorse">
+                    <label for="morse-input">Morse:</label>
+                    <textarea
+                        id="translator__input--morse"
+                        class="translator__input"
+                        type="text"
+                        id="morse-input"
+                        name="morse-input"
+                        placeholder="Type your morse code in here. Separate your letters by space and words by '/'."
+                    ></textarea>
+                </span>
+                <span id="spaneng">
+                    <label for="english-input">English:</label>
+                    <textarea
+                        id="translator__input--eng"
+                        class="translator__input readOnly"
+                        type="text"
+                        id="english-input"
+                        name="english-input"
+                        readonly
+                        placeholder="Type your English text here."
+                    ></textarea>
+                </span>
+            </div>
+            <button type="reset">Clear</button>
+        </form>
+    </body>
+</html>

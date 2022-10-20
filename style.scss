@@ -1,0 +1,46 @@
+* {
+    margin: 15px;
+    text-align: center;
+    font-family: monospace;
+    background-color: #95b8c6
+}
+
+h1 {
+    font-size: 35px;
+    color: #012030;
+}
+
+p {
+    font-size: 15px; 
+}
+
+.translator {
+    text-align: center;
+    & > div {
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+
+        & > span {
+            display: flex;
+        }
+    }
+    & label {
+        font-weight: bold;
+        font-size: 25px;
+        color: #012030;
+    }
+    &__input {
+        width: 30vw;
+        height: 30vh;
+        margin: 0px 10px;
+        font-size: 20px;
+        overflow-wrap: break-word;
+    }
+}
+
+.readOnly {
+    &::placeholder {
+        color: #95b8c6;
+    }
+}
