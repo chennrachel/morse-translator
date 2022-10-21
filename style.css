@@ -1,43 +1,59 @@
 * {
   margin: 15px;
-  text-align: center;
   font-family: monospace;
-  background-color: #95b8c6;
+  overflow-x: hidden;
+  text-align: center;
 }
 
 h1 {
   font-size: 35px;
-  color: #012030;
+  color: #1a304d;
 }
 
 p {
   font-size: 15px;
+  color: #5f82a3;
 }
 
-.translator {
-  text-align: center;
-}
-.translator > div {
-  padding: 20px;
+.translator div {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
 }
-.translator > div > span {
-  display: flex;
+@media only screen and (max-width: 800px) {
+  .translator div {
+    flex-direction: column;
+  }
 }
 .translator label {
   font-weight: bold;
   font-size: 25px;
-  color: #012030;
+  color: #5f82a3;
 }
 .translator__input {
-  width: 30vw;
+  width: 35vw;
   height: 30vh;
   margin: 0px 10px;
   font-size: 20px;
   overflow-wrap: break-word;
+  text-align: left;
+}
+@media only screen and (max-width: 800px) {
+  .translator__input {
+    width: 50vw;
+    height: 20vh;
+  }
+}
+.translator__input::placeholder {
+  color: #94A69F;
+}
+
+.translator--spanlang {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
 .readOnly::placeholder {
-  color: #95b8c6;
+  color: white;
 }
