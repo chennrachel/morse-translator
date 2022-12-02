@@ -1,5 +1,5 @@
 * {
-  margin: 15px;
+  margin-top: 15px;
   font-family: monospace;
   overflow-x: hidden;
   text-align: center;
@@ -18,11 +18,12 @@ p {
 .translator div {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
 }
 @media only screen and (max-width: 800px) {
   .translator div {
     flex-direction: column;
+    align-items: center;
   }
 }
 .translator label {
@@ -31,29 +32,39 @@ p {
   color: #5f82a3;
 }
 .translator__input {
-  width: 35vw;
+  width: 30vw;
   height: 30vh;
-  margin: 0px 10px;
   font-size: 20px;
   overflow-wrap: break-word;
   text-align: left;
 }
 @media only screen and (max-width: 800px) {
   .translator__input {
-    width: 50vw;
+    width: 70vw;
     height: 20vh;
   }
 }
 .translator__input::placeholder {
-  color: #94A69F;
+  color: #94a69f;
 }
 
 .translator--spanlang {
   display: flex;
   flex-direction: column;
   align-items: start;
+  padding: 30px;
+}
+@media only screen and (max-width: 800px) {
+  .translator--spanlang {
+    padding: 5px;
+  }
 }
 
 .readOnly::placeholder {
   color: white;
+}
+
+.btn {
+  border-radius: 10%;
+  border-width: 1px;
 }
